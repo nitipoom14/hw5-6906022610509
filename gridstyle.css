@@ -1,0 +1,269 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600;700&family=Noto+Sans+Thai:wght@400;500;600&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background-color: #e6ebf2;
+}
+
+body {
+  font-family: "Noto Sans Thai", "Kanit", "Segoe UI", sans-serif;
+  color: #16213a;
+  line-height: 1.5;
+  display: flex;
+  justify-content: center;
+  padding: 36px 16px;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1, h2, h3, .site-nav, .submit-btn {
+  font-family: "Kanit", "Noto Sans Thai", sans-serif;
+}
+
+
+.page {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto 1fr auto;
+  grid-template-areas:
+    "header"
+    "nav"
+    "main"
+    "footer";
+  width: 100%;
+  max-width: 860px;
+  background-color: #ffffff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 24px 60px -12px rgba(16, 22, 43, 0.35),
+              0 2px 8px rgba(16, 22, 43, 0.08);
+}
+
+
+.site-header {
+  grid-area: header;
+  line-height: 0;
+}
+
+.site-header img {
+  width: 100%;
+}
+
+
+.site-nav {
+  grid-area: nav;
+  background-color: #cbe7f8;
+  display: flex;
+  gap: 22px;
+  padding: 10px 22px;
+  font-weight: 500;
+  font-size: 0.82rem;
+}
+
+.site-nav a {
+  padding: 3px 1px;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.site-nav a:hover,
+.site-nav a.active {
+  border-color: #16213a;
+  font-weight: 600;
+}
+
+
+.main-grid {
+  grid-area: main;
+  display: grid;
+  grid-template-columns: 2.35fr 1fr;
+  gap: 14px;
+  padding: 14px;
+  align-items: start;
+  background-color: #ffffff;
+}
+
+
+.content-col {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
+.card {
+  background-color: #cbe7f8;
+  border-radius: 8px;
+  padding: 14px 16px 16px;
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+  gap: 6px;
+  box-shadow: 0 1px 3px rgba(16, 22, 43, 0.06);
+}
+
+.card h2 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.card p.card-sub {
+  font-size: 0.72rem;
+  color: #3a4a68;
+}
+
+.card .media {
+  border-radius: 6px;
+  overflow: hidden;
+  margin-top: 4px;
+}
+
+.card .media img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;   
+  object-fit: cover;
+}
+
+.card:hover .media img {
+  transform: scale(1.03);
+}
+
+.card .media.map img {
+  object-fit: contain;
+  background: #e9f3e5;
+  height: auto;
+}
+
+.sidebar {
+  background-color: #cbe7f8;
+  border-radius: 8px;
+  padding: 14px 16px 18px;
+  box-shadow: 0 1px 3px rgba(16, 22, 43, 0.06);
+}
+
+.sidebar h2 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+}
+
+.field label {
+  display: block;
+  font-size: 0.68rem;
+  font-weight: 600;
+  margin-bottom: 3px;
+  color: #22304f;
+}
+
+.field input[type="text"],
+.field input[type="email"],
+.field input[type="password"],
+.field input[type="tel"],
+.field select {
+  width: 100%;
+  padding: 5px 7px;
+  border: 1px solid #a9cee4;
+  border-radius: 4px;
+  background-color: #fdfefe;
+  font-size: 0.7rem;
+  font-family: inherit;
+}
+
+.field input:focus,
+.field select:focus {
+  outline: 2px solid #4c8fc2;
+  outline-offset: 1px;
+}
+
+.radio-row,
+.checkbox-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  font-size: 0.66rem;
+}
+
+.radio-row label,
+.checkbox-row label {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 400;
+}
+
+.terms {
+  font-size: 0.64rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 5px;
+  margin-top: 2px;
+}
+
+.submit-btn {
+  background-color: #16213a;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 0;
+  font-size: 0.76rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin-top: 2px;
+}
+
+.submit-btn:hover {
+  background-color: #2a3b66;
+}
+
+.member-link {
+  display: block;
+  text-align: center;
+  font-size: 0.64rem;
+  text-decoration: underline;
+  color: #22304f;
+  margin-top: 4px;
+}
+
+.site-footer {
+  grid-area: footer;
+  background-color: #0e152b;
+  line-height: 0;
+}
+
+.site-footer img {
+  width: 100%;
+}
+
+@media (max-width: 620px) {
+  body {
+    padding: 0;
+  }
+  .page {
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .main-grid {
+    grid-template-columns: 1fr;
+  }
+}
